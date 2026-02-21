@@ -1,5 +1,7 @@
 package com.example.test
 
+import android.app.TaskStackBuilder
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,9 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.test.databinding.ActivityMainBinding
+import com.example.test.Notas
 
 class MainActivity : AppCompatActivity() {
-    
     private lateinit var binding: ActivityMainBinding
     
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +38,11 @@ class MainActivity : AppCompatActivity() {
     private fun setupListeners() {
         binding.button.setOnClickListener {
             procesarNombre()
+        }
+        
+        // Agregar botón para ir a la calculadora de notas
+        binding.btnNotas.setOnClickListener {
+            startActivity(Intent(this, Notas::class.java))
         }
     }
     
