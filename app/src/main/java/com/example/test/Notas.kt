@@ -55,9 +55,9 @@ class Notas : AppCompatActivity() {
             val promedio = (nota1 * 0.33) + (nota2 * 0.33) + (nota3 * 0.34)
 
             val resultado = if (promedio >= 4) {
-                "$nombre, ¡Felicidades! Pasaste la materia con un promedio de %.2f".format(promedio)
+                "$nombre, ¡Felicidades! Pasaste la materia con un promedio de $promedio"
             } else {
-                "$nombre, lo siento. No pasaste la materia. Tu promedio es %.2f".format(promedio)
+                "$nombre, lo siento. No pasaste la materia. Tu promedio es $promedio"
             }
 
             textViewResultado.text = resultado
