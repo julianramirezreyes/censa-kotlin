@@ -47,8 +47,8 @@ class Notas : AppCompatActivity() {
             val nota2 = nota2Str.toDouble()
             val nota3 = nota3Str.toDouble()
 
-            if (nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10 || nota3 < 0 || nota3 > 10) {
-                Toast.makeText(this, "Las notas deben estar entre 0 y 10", Toast.LENGTH_SHORT).show()
+            if (nota1 < 0 || nota1 > 5 || nota2 < 0 || nota2 > 5 || nota3 < 0 || nota3 > 5) {
+                Toast.makeText(this, "Las notas deben estar entre 0 y 5", Toast.LENGTH_SHORT).show()
                 return
             }
 
