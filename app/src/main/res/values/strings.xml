@@ -2,7 +2,8 @@
     <string name="app_name">Bienvenido App</string>
     <string name="welcome_title">¡Bienvenido!</string>
     <string name="name_hint">Ingresa tu nombre</string>
-    <string name="submit_button">Enviar</string>
+    <string name="submit_button">Entrar</string>
     <string name="welcome_message">¡Hola %s! Bienvenido a nuestra aplicación</string>
     <string name="error_empty_name">Por favor, ingresa tu nombre</string>
+    <string name="main_welcome">¡Hola %s!</string>
 </resources>

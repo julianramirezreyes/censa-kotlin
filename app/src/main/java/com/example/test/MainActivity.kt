@@ -1,6 +1,5 @@
 package com.example.test
 
-import android.app.TaskStackBuilder
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -11,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.test.databinding.ActivityMainBinding
-import com.example.test.Notas
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -38,11 +36,6 @@ class MainActivity : AppCompatActivity() {
     private fun setupListeners() {
         binding.button.setOnClickListener {
             procesarNombre()
-        }
-        
-        // Agregar botón para ir a la calculadora de notas
-        binding.btnNotas.setOnClickListener {
-            startActivity(Intent(this, Notas::class.java))
         }
     }
     
@@ -73,7 +66,17 @@ class MainActivity : AppCompatActivity() {
         binding.resultTextView.text = mensaje
         binding.resultTextView.visibility = View.VISIBLE
         
+        // Guardar el nombre en SharedPreferences para usarlo en otras pantallas
+        val prefs = getSharedPreferences("app_prefs", MODE_PRIVATE)
+        prefs.edit().putString("user_name", nombre).apply()
+        
         limpiarCampo()
+        
+        // Navegar al menú principal después de 2 segundos
+        binding.resultTextView.postDelayed({
+            startActivity(Intent(this, MainMenuActivity::class.java))
+            finish()
+        }, 2000)
     }
     
     private fun limpiarCampo() {
