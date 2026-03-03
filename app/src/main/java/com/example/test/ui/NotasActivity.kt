@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.test.ui
 
 import android.app.AlertDialog
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.test.R
 
 data class ResultadoNota(
     val nombreEstudiante: String,

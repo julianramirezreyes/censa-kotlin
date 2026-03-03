@@ -1,4 +1,4 @@
-package com.example.test
+package com.example.test.ui
 
 import android.os.Bundle
 import android.view.View
@@ -10,6 +10,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.test.R
 
 class DivisasActivity : AppCompatActivity() {
     

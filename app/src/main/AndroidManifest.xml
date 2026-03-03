@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,17 +23,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainMenuActivity"
+            android:name=".ui.MainMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".NotasActivity"
+            android:name=".ui.NotasActivity"
             android:exported="false" />
         <activity
-            android:name=".PrimosActivity"
+            android:name=".ui.PrimosActivity"
             android:exported="false" />
         <activity
-            android:name=".DivisasActivity"
+            android:name=".ui.DivisasActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".ui.UsersListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.UserFormActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>
