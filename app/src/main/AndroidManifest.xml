@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +34,10 @@
             android:exported="false" />
         <activity
             android:name=".ui.DivisasActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.ApiTesterActivity"
             android:exported="false" />
 
         <activity

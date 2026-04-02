@@ -55,6 +55,10 @@ class MainMenuActivity : AppCompatActivity() {
             startActivity(Intent(this, DivisasActivity::class.java))
         }
 
+        binding.cardApiPostman.setOnClickListener {
+            startActivity(Intent(this, ApiTesterActivity::class.java))
+        }
+
         binding.cardCrud.setOnClickListener {
             startActivity(Intent(this, UsersListActivity::class.java))
         }
